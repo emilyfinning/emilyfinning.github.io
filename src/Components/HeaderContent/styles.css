@@ -1,0 +1,77 @@
+@keyframes slideInFromLeft {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+@keyframes fadeInDesc {
+  0% {
+    transform: translateX(50%);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeInName {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.line-detail {
+  background-color: #111d13;
+  width: 20%;
+  height: 5px;
+  margin-top: 53px;
+  margin-right: 10px;
+  animation: 1.5s ease-out 0s 1 slideInFromLeft;
+}
+
+.top-title-box {
+  display: flex;
+  padding-top: 150px;
+  animation: 1.5s ease-out 0s 1 fadeInName;
+}
+
+.bottom-title-grid {
+  padding-left: 15%;
+}
+
+.profile-pic {
+  width: 210px;
+  border: rgba(65, 93, 67, 0.4) 5px solid;
+  transition: 0.5s;
+}
+
+.overlay {
+  position: relative;
+  width: 210px;
+  height: 281px;
+  background-color: rgba(112, 151, 117, 0.5);
+  top: -294px;
+  left: 10px;
+}
+
+.name-desc {
+  padding-left: 20px;
+  position: relative;
+  top: -15px;
+  animation: 1.5s ease-out 0s 1 fadeInDesc;
+}
+
+.desc {
+  max-width: 230px;
+}
+
+.desc-text {
+  color: #111d13;
+}

@@ -12,8 +12,9 @@ const theme = createTheme({
       fontSize: "55pt",
     },
     body1: {
-      fontFamily: ["Shippori Antique B1"].join(","),
+      fontFamily: ["Open Sans"].join(","),
       fontSize: "11pt",
+      fontWeight: 500,
     },
     subtitle1: {
       fontFamily: ["Inter"].join(","),

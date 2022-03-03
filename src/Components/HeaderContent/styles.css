@@ -28,12 +28,13 @@
 }
 
 .line-detail {
-  background-color: #111d13;
+  background-color: #000;
   width: 20%;
   height: 5px;
   margin-top: 53px;
   margin-right: 10px;
   animation: 1.5s ease-out 0s 1 slideInFromLeft;
+  z-index: 2;
 }
 
 .top-title-box {

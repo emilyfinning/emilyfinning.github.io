@@ -4,11 +4,11 @@ const theme = createTheme({
   typography: {
     h1: {
       fontFamily: ["Inter"].join(","),
-      fontWeight: 400,
+      fontWeight: 500,
     },
     h2: {
       fontFamily: ["Inter"].join(","),
-      fontWeight: 400,
+      fontWeight: 500,
       fontSize: "55pt",
     },
     body1: {

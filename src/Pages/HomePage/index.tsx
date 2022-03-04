@@ -3,6 +3,7 @@ import { Box } from "@mui/material";
 import HeaderContent from "../../Components/HeaderContent";
 import Navigation from "../../Components/Navigation";
 import AboutContent from "../../Components/AboutContent";
+import ProjectsContent from "../../Components/ProjectsContent";
 import "./styles.css";
 
 const HomePage: React.FC = () => {
@@ -27,7 +28,11 @@ const HomePage: React.FC = () => {
       <Box className="about-box" id="about-section">
         <AboutContent />
       </Box>
-      <Box className="projects-box"></Box>
+      <Box className="dec-box-1" />
+      <Box className="dec-box-2" />
+      <Box className="projects-box" id="project-section">
+        <ProjectsContent />
+      </Box>
       <Box className="contact-box"></Box>
     </Box>
   );

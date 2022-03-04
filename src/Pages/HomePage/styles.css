@@ -5,7 +5,7 @@
 
 .about-box {
   background-color: #111d13;
-  height: 800px;
+  height: fit-content;
 }
 
 .projects-box {
@@ -51,4 +51,24 @@
   z-index: 1;
   margin-left: 2%;
   top: 760px;
+}
+
+.dec-box-1 {
+  height: 800px;
+  width: 2%;
+  background-color: #a1cca5;
+  position: absolute;
+  top: 1500px;
+  left: 3%;
+  z-index: 3;
+}
+
+.dec-box-2 {
+  height: 800px;
+  width: 2%;
+  background-color: #375039;
+  position: absolute;
+  top: 1400px;
+  left: 5%;
+  z-index: 4;
 }

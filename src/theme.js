@@ -16,6 +16,11 @@ const theme = createTheme({
       fontWeight: 500,
       fontSize: "40pt",
     },
+    h4: {
+      fontFamily: ["Inter"].join(","),
+      fontWeight: 600,
+      fontSize: "24pt",
+    },
     body1: {
       fontFamily: ["Open Sans"].join(","),
       fontSize: "11pt",

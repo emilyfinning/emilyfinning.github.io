@@ -19,3 +19,10 @@
   position: absolute;
   right: 0;
 }
+
+.project-list-container {
+  width: 85%;
+  height: 550px;
+  margin-top: 50px;
+  margin-left: 10%;
+}

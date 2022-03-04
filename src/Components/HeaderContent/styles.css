@@ -67,6 +67,7 @@
   position: relative;
   top: -15px;
   animation: 1.5s ease-out 0s 1 fadeInDesc;
+  z-index: 3;
 }
 
 .desc {

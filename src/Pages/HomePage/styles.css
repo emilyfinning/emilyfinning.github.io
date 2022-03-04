@@ -8,6 +8,16 @@
   height: 800px;
 }
 
+.projects-box {
+  background-color: #709775;
+  height: 800px;
+}
+
+.contact-box {
+  background-color: #111d13;
+  height: 800px;
+}
+
 .code-pic {
   position: absolute;
   width: 320px;

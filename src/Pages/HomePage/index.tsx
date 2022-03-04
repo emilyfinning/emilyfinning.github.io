@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import HeaderContent from "../../Components/HeaderContent";
 import Navigation from "../../Components/Navigation";
+import AboutContent from "../../Components/AboutContent";
 import "./styles.css";
 
 const HomePage: React.FC = () => {
@@ -23,7 +24,9 @@ const HomePage: React.FC = () => {
         alt="Some leaves"
         className="leaf-pic"
       />
-      <Box className="about-box" id="about-section"></Box>
+      <Box className="about-box" id="about-section">
+        <AboutContent />
+      </Box>
       <Box className="projects-box"></Box>
       <Box className="contact-box"></Box>
     </Box>

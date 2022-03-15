@@ -1,17 +1,82 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Typography, Grid } from "@mui/material";
+import { createClient, EntryCollection } from "contentful";
+import _ from "lodash";
+import * as T from "../../../contentful/__generated__/types";
 import Project from "./Project";
 import "./styles.css";
 
+interface Project {
+  date: string;
+  title: string;
+  description: string;
+  url: string;
+}
+
+type ContentType = T.IProject;
+
+type ContentEntry<ID extends T.CONTENT_TYPE> = Pick<ContentType, "fields"> & {
+  sys: {
+    contentType: {
+      sys: {
+        id: ID;
+      };
+    };
+  };
+};
+
+type ContentTypeID<CT extends ContentType = ContentType> =
+  CT["sys"]["contentType"]["sys"]["id"];
+
+type ContentEntryByID<ID extends T.CONTENT_TYPE> = Extract<
+  ContentType,
+  ContentEntry<ID>
+>;
+
 const ProjectsContent: React.FC = () => {
-  const content = [
-    {
-      id: "portfolio",
-      title: "Project Portfolio",
-      desc: "I wanted a creative way to display my personal projects, so I set about creating a portfolio in react that would tell the world a bit about me, my skills, and the projects that I've created.",
-      githubUrl: "https://github.com/emilyfinning/emilyfinning.github.io",
-    },
-  ];
+  const [projects, setProjects] = useState<Project[]>([]);
+
+  var contentfulClient = createClient({
+    space: "xafplok25vl5",
+    accessToken: "SLd6ub8iFL4PmdcE0psdSkmzPzEzpUUIJ8L2ZNQFQ2c",
+  });
+
+  const getProjectEntry = async <
+    CTID extends ContentTypeID,
+    CE extends ContentEntryByID<CTID>
+  >(
+    contentTypeID: CTID
+  ): Promise<EntryCollection<CE["fields"]>> => {
+    return contentfulClient.getEntries({
+      content_type: contentTypeID,
+    });
+  };
+
+  const fillProjects = async () => {
+    console.log("filling projects");
+    return await (
+      await getProjectEntry("project")
+    ).items.forEach((entry) => {
+      const newProjects = _.cloneDeep(projects);
+      newProjects.push({
+        date: entry.fields.date!,
+        title: entry.fields.title!,
+        description: entry.fields.description!,
+        url: entry.fields.url!,
+      });
+      setProjects(newProjects);
+    });
+  };
+
+  useEffect(() => {
+    console.log("using effect");
+    fillProjects();
+  }, []);
+
+  useEffect(() => {
+    console.log("projects has changed");
+    console.log(projects);
+  }, [projects]);
 
   return (
     <Box className="projects-container">
@@ -23,12 +88,12 @@ const ProjectsContent: React.FC = () => {
       </Box>
       <Box className="project-list-container">
         <Grid container spacing={4}>
-          {content.map((project) => (
+          {projects.map((project) => (
             <Project
-              id={project.id}
+              date={project.date}
               title={project.title}
-              desc={project.desc}
-              githubUrl={project.githubUrl}
+              desc={project.description}
+              githubUrl={project.url}
             />
           ))}
         </Grid>

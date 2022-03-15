@@ -6,7 +6,7 @@ import NotesIcon from "@mui/icons-material/Notes";
 import "./styles.css";
 
 interface ProjectProps {
-  id: string;
+  date: string;
   title: string;
   desc: string;
   githubUrl: string;
@@ -14,7 +14,7 @@ interface ProjectProps {
 
 const StyledButton = styled(Button)({
   borderRadius: "0",
-  width: "49%",
+  width: "100%",
   height: "50px",
   backgroundColor: "#415D43",
   "&:hover": {
@@ -22,7 +22,7 @@ const StyledButton = styled(Button)({
   },
 });
 
-const Project: React.FC<ProjectProps> = ({ id, title, desc, githubUrl }) => {
+const Project: React.FC<ProjectProps> = ({ date, title, desc, githubUrl }) => {
   return (
     <Grid item xs={4}>
       <Box className="project-box">
@@ -41,9 +41,6 @@ const Project: React.FC<ProjectProps> = ({ id, title, desc, githubUrl }) => {
           onClick={() => window.open(githubUrl)}
         >
           View on Github
-        </StyledButton>
-        <StyledButton variant="contained" startIcon={<NotesIcon />}>
-          Dev Diary
         </StyledButton>
       </Box>
     </Grid>

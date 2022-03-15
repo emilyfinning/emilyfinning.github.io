@@ -25,12 +25,14 @@ const Navigation: React.FC = () => {
           </Box>
         </Link>
 
-        <Box className="nav-link nav-link-3">
-          <Box className="pusher" />
-          <Typography variant="subtitle1" className="link-text">
-            CONTACT
-          </Typography>
-        </Box>
+        <Link to="contact-section" smooth="true" offset={-70}>
+          <Box className="nav-link nav-link-3">
+            <Box className="pusher" />
+            <Typography variant="subtitle1" className="link-text">
+              CONTACT
+            </Typography>
+          </Box>
+        </Link>
       </Box>
     </Box>
   );

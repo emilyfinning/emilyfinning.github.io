@@ -1,0 +1,33 @@
+.contact-container {
+  display: flex;
+  padding-top: 150px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-title {
+  color: #a1cca5;
+  background-color: #111d13;
+  z-index: 2;
+  padding: 20px;
+}
+
+.dec-line-contact {
+  background-color: #e7f7e9;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 2580px;
+  z-index: 1;
+}
+
+.field-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 300px;
+  padding: 0px 20px 20px 20px;
+  border-radius: 5px;
+  margin-top: 30px;
+}

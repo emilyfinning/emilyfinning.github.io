@@ -18,6 +18,11 @@
   height: 800px;
 }
 
+.footer-box {
+  background-color: #709775;
+  height: 100px;
+}
+
 .code-pic {
   position: absolute;
   width: 320px;

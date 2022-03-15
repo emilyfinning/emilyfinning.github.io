@@ -5,6 +5,7 @@ import Navigation from "../../Components/Navigation";
 import AboutContent from "../../Components/AboutContent";
 import ProjectsContent from "../../Components/ProjectsContent";
 import "./styles.css";
+import ContactContent from "../../Components/ContactContent";
 
 const HomePage: React.FC = () => {
   return (
@@ -33,7 +34,10 @@ const HomePage: React.FC = () => {
       <Box className="projects-box" id="project-section">
         <ProjectsContent />
       </Box>
-      <Box className="contact-box"></Box>
+      <Box className="contact-box" id="contact-section">
+        <ContactContent />
+      </Box>
+      <Box className="footer-box" />
     </Box>
   );
 };

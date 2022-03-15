@@ -37,6 +37,11 @@ const theme = createTheme({
       fontSize: "16pt",
     },
   },
+  palette: {
+    primary: {
+      main: "#415D43",
+    },
+  },
 });
 
 export default theme;

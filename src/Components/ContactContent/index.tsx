@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Box, Typography, TextField, Button, FormControl } from "@mui/material";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import validator from "validator";
 import emailjs from "@emailjs/browser";
 import "./styles.css";
@@ -16,6 +17,7 @@ const ContactContent: React.FC = () => {
 
   const [emailError, setEmailError] = useState(false);
   const [attemptedSubmit, setAttemptedSubmit] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newMessage = _.cloneDeep(message);
@@ -44,6 +46,7 @@ const ContactContent: React.FC = () => {
         .then(
           (result) => {
             console.log(result.text);
+            setSubmitted(true);
           },
           (error) => {
             console.log(error.text);
@@ -58,50 +61,59 @@ const ContactContent: React.FC = () => {
         CONTACT ME
       </Typography>
       <Box className="dec-line-contact" />
-      <Box className="field-container">
+      {submitted ? (
+        <Box className="field-container">
+          <CheckCircleIcon color="primary" className="check-icon" />
+          <Typography variant="body1" className="check-text">
+            Your message has been received!
+          </Typography>
+        </Box>
+      ) : (
         <FormControl id="messageForm" component="form">
-          <TextField
-            variant="standard"
-            label="Name"
-            id="name"
-            name="name"
-            fullWidth
-            sx={{ backgroundColor: "white", marginTop: "10px" }}
-            onChange={handleChange}
-            error={attemptedSubmit && message.name === ""}
-          />
-          <TextField
-            variant="standard"
-            label="Email"
-            id="email"
-            name="email"
-            fullWidth
-            sx={{ backgroundColor: "white", marginTop: "10px" }}
-            onChange={handleChange}
-            error={attemptedSubmit && (message.email === "" || emailError)}
-          />
-          <TextField
-            variant="standard"
-            label="Message"
-            id="message"
-            name="message"
-            fullWidth
-            sx={{ backgroundColor: "white", marginTop: "10px" }}
-            multiline
-            minRows={6}
-            onChange={handleChange}
-            error={attemptedSubmit && message.message === ""}
-          />
-        </FormControl>
+          <Box className="field-container">
+            <TextField
+              variant="standard"
+              label="Name"
+              id="name"
+              name="name"
+              fullWidth
+              sx={{ backgroundColor: "white", marginTop: "10px" }}
+              onChange={handleChange}
+              error={attemptedSubmit && message.name === ""}
+            />
+            <TextField
+              variant="standard"
+              label="Email"
+              id="email"
+              name="email"
+              fullWidth
+              sx={{ backgroundColor: "white", marginTop: "10px" }}
+              onChange={handleChange}
+              error={attemptedSubmit && (message.email === "" || emailError)}
+            />
+            <TextField
+              variant="standard"
+              label="Message"
+              id="message"
+              name="message"
+              fullWidth
+              sx={{ backgroundColor: "white", marginTop: "10px" }}
+              multiline
+              minRows={6}
+              onChange={handleChange}
+              error={attemptedSubmit && message.message === ""}
+            />
 
-        <Button
-          variant="contained"
-          sx={{ marginTop: "10px" }}
-          onClick={sendMessage}
-        >
-          Submit
-        </Button>
-      </Box>
+            <Button
+              variant="contained"
+              sx={{ marginTop: "10px" }}
+              onClick={sendMessage}
+            >
+              Submit
+            </Button>
+          </Box>
+        </FormControl>
+      )}
     </Box>
   );
 };

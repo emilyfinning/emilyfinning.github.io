@@ -37,8 +37,8 @@ const ProjectsContent: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>([]);
 
   var contentfulClient = createClient({
-    space: "xafplok25vl5",
-    accessToken: "SLd6ub8iFL4PmdcE0psdSkmzPzEzpUUIJ8L2ZNQFQ2c",
+    space: process.env.REACT_APP_CONTENTFUL_SPACE_ID!,
+    accessToken: process.env.REACT_APP_CONTENTFUL_API_ACCESS_TOKEN!,
   });
 
   const getProjectEntry = async <
@@ -53,7 +53,6 @@ const ProjectsContent: React.FC = () => {
   };
 
   const fillProjects = async () => {
-    console.log("filling projects");
     return await (
       await getProjectEntry("project")
     ).items.forEach((entry) => {
@@ -69,14 +68,8 @@ const ProjectsContent: React.FC = () => {
   };
 
   useEffect(() => {
-    console.log("using effect");
     fillProjects();
   }, []);
-
-  useEffect(() => {
-    console.log("projects has changed");
-    console.log(projects);
-  }, [projects]);
 
   return (
     <Box className="projects-container">

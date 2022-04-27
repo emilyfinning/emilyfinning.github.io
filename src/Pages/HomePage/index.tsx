@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Link } from "@mui/material";
 import HeaderContent from "../../Components/HeaderContent";
 import Navigation from "../../Components/Navigation";
 import AboutContent from "../../Components/AboutContent";
@@ -37,7 +37,15 @@ const HomePage: React.FC = () => {
       <Box className="contact-box" id="contact-section">
         <ContactContent />
       </Box>
-      <Box className="footer-box" />
+      <Box className="footer-box">
+        <Link
+          href="https://www.flaticon.com/free-icons/"
+          title="hello icons"
+          sx={{ textDecoration: "none" }}
+        >
+          Icons provided by Flaticon
+        </Link>
+      </Box>
     </Box>
   );
 };

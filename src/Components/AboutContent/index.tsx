@@ -6,14 +6,14 @@ const AboutContent: React.FC = () => {
   return (
     <Box className="about-container">
       <Typography variant="body2" className="desc-p1">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non
-        scelerisque lectus, at fringilla velit. Fusce bibendum posuere ligula
-        sit amet posuere.
+        I'm a recent graduate of Warwick University currently working in
+        Security to deliver high quality front-end applications to our
+        customers.
       </Typography>
       <Typography variant="body2" className="desc-p2">
-        Etiam vel rutrum quam. Nulla faucibus pulvinar massa, eget blandit justo
-        malesuada eget. Donec diam turpis, condimentum eu metus suscipit,
-        egestas dictum eros.
+        I thrive in an agile environment and am always working towards team
+        success in producing a great product, focusing on a clean and intuitive
+        user experience that is pleasing, responsive and accessible for all.
       </Typography>
       <Box className="title-box">
         <Typography variant="h2" className="about-title">

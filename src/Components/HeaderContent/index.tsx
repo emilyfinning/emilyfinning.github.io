@@ -5,9 +5,14 @@ import "./styles.css";
 const HeaderContent: React.FC = () => {
   return (
     <Box className="container">
+      <img
+        src={require("../../Images/profilepicsquare.jpg")}
+        className="profile-pic-small"
+        alt="Emily Finning"
+      />
       <Box className="top-title-box">
         <Box className="line-detail" />
-        <Typography variant="h1" sx={{ color: "#E7F7E9" }}>
+        <Typography variant="h1" sx={{ color: "#E7F7E9" }} className="emily">
           EMILY
         </Typography>
       </Box>
@@ -20,7 +25,11 @@ const HeaderContent: React.FC = () => {
           />
         </Grid>
         <Grid item className="name-desc">
-          <Typography variant="h2" sx={{ color: "#E7F7E9" }}>
+          <Typography
+            variant="h2"
+            sx={{ color: "#E7F7E9" }}
+            className="finning"
+          >
             FINNING
           </Typography>
           <Box className="desc">

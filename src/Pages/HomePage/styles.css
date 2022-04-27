@@ -50,7 +50,7 @@
 
 .dec-line-2 {
   position: absolute;
-  width: 80%;
+  width: 73%;
   height: 1px;
   background-color: #a1cca5;
   z-index: 1;
@@ -82,4 +82,28 @@
   display: flex;
   justify-content: center;
   padding: 40px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .code-pic {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .leaf-pic {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .dec-line-2 {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .header-box {
+    height: fit-content;
+  }
 }

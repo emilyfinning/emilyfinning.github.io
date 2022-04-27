@@ -81,8 +81,9 @@ const ProjectsContent: React.FC = () => {
       </Box>
       <Box className="project-list-container">
         <Grid container spacing={4}>
-          {projects.map((project) => (
+          {projects.map((project, i) => (
             <Project
+              key={i}
               date={project.date}
               title={project.title}
               desc={project.description}

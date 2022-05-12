@@ -88,6 +88,22 @@
   padding: 40px;
 }
 
+.scroll-top-button {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  background-color: var(--palest-green);
+  left: calc(50% - 40px);
+  border-radius: 50%;
+  z-index: 5;
+  top: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: var(--darker-green);
+}
+
 @media only screen and (max-width: 1400px) {
   .code-pic {
     display: none;

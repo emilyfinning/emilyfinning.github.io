@@ -1,5 +1,7 @@
 import React from "react";
 import { Box, Link } from "@mui/material";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import { Link as ScrollLink } from "react-scroll";
 import HeaderContent from "../../Components/HeaderContent";
 import Navigation from "../../Components/Navigation";
 import AboutContent from "../../Components/AboutContent";
@@ -17,12 +19,12 @@ const HomePage: React.FC = () => {
         <Navigation />
       </Box>
       <img
-        src={require("../../Images/code3.jpg")}
+        src={require("../../Images/code3.png")}
         alt="Some code"
         className="code-pic"
       />
       <img
-        src={require("../../Images/leaf.jpg")}
+        src={require("../../Images/leaf.png")}
         alt="Some leaves"
         className="leaf-pic"
       />
@@ -46,6 +48,11 @@ const HomePage: React.FC = () => {
           Icons provided by Flaticon
         </Link>
       </Box>
+      <ScrollLink to="header-box" smooth="true">
+        <Box className="scroll-top-button">
+          <ArrowUpwardIcon />
+        </Box>
+      </ScrollLink>
     </Box>
   );
 };

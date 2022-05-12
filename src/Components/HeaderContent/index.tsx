@@ -6,7 +6,7 @@ const HeaderContent: React.FC = () => {
   return (
     <Box className="container">
       <img
-        src={require("../../Images/profilepicsquare.jpg")}
+        src={require("../../Images/profilepicsquare.png")}
         className="profile-pic-small"
         alt="Emily Finning"
       />
@@ -19,7 +19,7 @@ const HeaderContent: React.FC = () => {
       <Grid container className="bottom-title-grid">
         <Grid item>
           <img
-            src={require("../../Images/profilepiclight.jpg")}
+            src={require("../../Images/profilepiclight.png")}
             className="profile-pic"
             alt="Emily Finning"
           />

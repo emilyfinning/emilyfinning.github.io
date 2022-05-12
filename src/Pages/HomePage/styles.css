@@ -106,4 +106,10 @@
   .header-box {
     height: fit-content;
   }
+  .dec-line-2 {
+    top: 585px;
+  }
+  .dec-line-1 {
+    height: 585px;
+  }
 }

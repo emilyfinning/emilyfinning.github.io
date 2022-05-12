@@ -27,6 +27,13 @@
   padding-right: 10px;
 }
 
+.mobile-title {
+  color: #a1cca5;
+  display: none;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
 .about-line-detail {
   background-color: #e7f7e9;
   width: 26%;
@@ -66,4 +73,42 @@
   padding: 20px 50px;
   width: 120px;
   height: 120px;
+}
+
+@media only screen and (max-width: 1320px) {
+  .skill-icon {
+    width: 80px;
+    height: 80px;
+    padding: 10px 25px;
+  }
+  .skill-container {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .title-box {
+    display: none;
+  }
+  .mobile-title {
+    display: block;
+  }
+  .about-container {
+    padding: 5% 5%;
+    text-align: center;
+  }
+  .about-line-detail {
+    display: none;
+  }
+  .desc-p1 {
+    max-width: 100%;
+  }
+  .desc-p2 {
+    max-width: 100%;
+  }
+  .skill-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

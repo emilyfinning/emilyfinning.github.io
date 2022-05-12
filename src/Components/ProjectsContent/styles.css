@@ -12,9 +12,15 @@
   color: #a1cca5;
 }
 
+.projects-mobile-title {
+  padding: 0% 10%;
+  color: #a1cca5;
+  display: none;
+}
+
 .projects-line-detail {
   background-color: #e7f7e9;
-  width: 62%;
+  width: calc(100% - 800px);
   height: 5px;
   position: absolute;
   right: 0;
@@ -25,4 +31,18 @@
   height: 550px;
   margin-top: 50px;
   margin-left: 10%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 600px) {
+  .projects-mobile-title {
+    display: block;
+  }
+  .projects-title {
+    display: none;
+  }
+  .project-list-container {
+    margin-top: 20px;
+  }
 }

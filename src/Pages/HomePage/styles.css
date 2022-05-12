@@ -112,4 +112,7 @@
   .dec-line-1 {
     height: 585px;
   }
+  .projects-box {
+    height: fit-content;
+  }
 }

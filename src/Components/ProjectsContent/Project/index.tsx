@@ -24,7 +24,7 @@ const StyledButton = styled(Button)({
 
 const Project: React.FC<ProjectProps> = ({ date, title, desc, githubUrl }) => {
   return (
-    <Grid item xs={4}>
+    <Box className="project-parent">
       <Box className="project-box">
         <Box className="project-title-box">
           <Box className="cube" />
@@ -43,7 +43,7 @@ const Project: React.FC<ProjectProps> = ({ date, title, desc, githubUrl }) => {
           View on Github
         </StyledButton>
       </Box>
-    </Grid>
+    </Box>
   );
 };
 

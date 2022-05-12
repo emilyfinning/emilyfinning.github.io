@@ -77,20 +77,21 @@ const ProjectsContent: React.FC = () => {
         <Typography variant="h1" className="projects-title">
           PROJECTS
         </Typography>
+        <Typography variant="h3" className="projects-mobile-title">
+          PROJECTS
+        </Typography>
         <Box className="projects-line-detail" />
       </Box>
       <Box className="project-list-container">
-        <Grid container spacing={4}>
-          {projects.map((project, i) => (
-            <Project
-              key={i}
-              date={project.date}
-              title={project.title}
-              desc={project.description}
-              githubUrl={project.url}
-            />
-          ))}
-        </Grid>
+        {projects.map((project, i) => (
+          <Project
+            key={i}
+            date={project.date}
+            title={project.title}
+            desc={project.description}
+            githubUrl={project.url}
+          />
+        ))}
       </Box>
     </Box>
   );

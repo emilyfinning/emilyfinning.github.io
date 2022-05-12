@@ -45,4 +45,7 @@
   .project-list-container {
     margin-top: 20px;
   }
+  .projects-header {
+    justify-content: center;
+  }
 }

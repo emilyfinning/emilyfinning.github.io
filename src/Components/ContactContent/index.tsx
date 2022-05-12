@@ -60,6 +60,9 @@ const ContactContent: React.FC = () => {
       <Typography variant="h2" className="contact-title">
         CONTACT ME
       </Typography>
+      <Typography variant="h3" className="contact-title-mobile">
+        CONTACT ME
+      </Typography>
       <Box className="dec-line-contact" />
       {submitted ? (
         <Box className="field-container">

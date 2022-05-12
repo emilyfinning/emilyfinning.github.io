@@ -12,12 +12,21 @@
   padding: 20px;
 }
 
+.contact-title-mobile {
+  color: #a1cca5;
+  background-color: #111d13;
+  z-index: 2;
+  padding: 20px;
+  display: none;
+  text-align: center;
+}
+
 .dec-line-contact {
   background-color: #e7f7e9;
   height: 5px;
   width: 100%;
-  position: absolute;
-  top: 2580px;
+  position: relative;
+  top: -67px;
   z-index: 1;
 }
 
@@ -39,4 +48,17 @@
 
 .check-text {
   margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .contact-title {
+    display: none;
+  }
+  .contact-title-mobile {
+    display: block;
+  }
 }

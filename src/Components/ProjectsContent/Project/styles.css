@@ -35,7 +35,7 @@
   margin: 20px;
 }
 
-@media only screen and (max-width: 50px) {
+@media only screen and (max-width: 500px) {
   .project-box {
     width: 85%;
   }

@@ -14,7 +14,7 @@
   margin: 4px 10px 0px 5px;
   width: 30px;
   height: 30px;
-  background-color: #415d43;
+  background-color: var(--dark-green);
 }
 
 .description-text {
@@ -35,7 +35,7 @@
   margin: 20px;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 50px) {
   .project-box {
     width: 85%;
   }

@@ -6,15 +6,15 @@
 }
 
 .contact-title {
-  color: #a1cca5;
-  background-color: #111d13;
+  color: var(--light-green);
+  background-color: var(--darkest-green);
   z-index: 2;
   padding: 20px;
 }
 
 .contact-title-mobile {
-  color: #a1cca5;
-  background-color: #111d13;
+  color: var(--light-green);
+  background-color: var(--darkest-green);
   z-index: 2;
   padding: 20px;
   display: none;
@@ -22,7 +22,7 @@
 }
 
 .dec-line-contact {
-  background-color: #e7f7e9;
+  background-color: var(--palest-green);
   height: 5px;
   width: 100%;
   position: relative;

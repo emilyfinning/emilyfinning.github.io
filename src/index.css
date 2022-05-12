@@ -19,3 +19,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+:root {
+  --palest-green: #e7f7e9;
+  --light-green: #a1cca5;
+  --darkest-green: #111d13;
+  --mid-green: #709775;
+  --dark-green: #415d43;
+  --darker-green: #375039;
+}

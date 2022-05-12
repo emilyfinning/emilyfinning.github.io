@@ -4,12 +4,12 @@
 }
 
 .desc-p1 {
-  color: #e7f7e9;
+  color: var(--palest-green);
   max-width: 35%;
 }
 
 .desc-p2 {
-  color: #e7f7e9;
+  color: var(--palest-green);
   max-width: 25%;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .title-box {
-  color: #a1cca5;
+  color: var(--light-green);
   position: absolute;
   top: 1010px;
   right: 26%;
@@ -28,14 +28,14 @@
 }
 
 .mobile-title {
-  color: #a1cca5;
+  color: var(--light-green);
   display: none;
   text-align: center;
   padding-bottom: 20px;
 }
 
 .about-line-detail {
-  background-color: #e7f7e9;
+  background-color: var(--palest-green);
   width: 26%;
   height: 5px;
   position: absolute;
@@ -44,11 +44,11 @@
 }
 
 .skills-box {
-  background-color: #a1cca5;
+  background-color: var(--light-green);
   width: fit-content;
   padding: 5px 15px;
   margin-top: 40px;
-  color: #111d13;
+  color: var(--darkest-green);
   display: flex;
 }
 

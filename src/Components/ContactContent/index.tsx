@@ -3,6 +3,8 @@ import { Box, Typography, TextField, Button, FormControl } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import validator from "validator";
 import emailjs from "@emailjs/browser";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import "./styles.css";
 import _ from "lodash";
 
@@ -64,6 +66,18 @@ const ContactContent: React.FC = () => {
         CONTACT ME
       </Typography>
       <Box className="dec-line-contact" />
+      <Box className="social-icon-container">
+        <GitHubIcon
+          className="social-icon"
+          onClick={() => window.open("https://github.com/emilyfinning")}
+        />
+        <LinkedInIcon
+          className="social-icon"
+          onClick={() =>
+            window.open("https://www.linkedin.com/in/emily-finning-2480a01a1/")
+          }
+        />
+      </Box>
       {submitted ? (
         <Box className="field-container">
           <CheckCircleIcon color="primary" className="check-icon" />

@@ -50,6 +50,15 @@
   margin-bottom: 10px;
 }
 
+.social-icon-container {
+  color: var(--light-green);
+}
+
+.social-icon {
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 800px) {
   .contact-container {
     padding-top: 70px;
